@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/src/views/assets/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Qwigley' rel='stylesheet'>
+    <title>Login</title>
+</head>
+
+<body class="background">
+    <div class="wrapper">
+        <div>
+            <form method="POST" action="/v1/auth/login">
+                <div class="included">
+                    <div class="welcome">
+                        Welcome!
+                    </div>
+                    <div>
+                        <input type="email" name="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div>
+                        <input type="password" name="password" class="form-control" placeholder="password" id="passInput" required>
+                        <div class="password-logo"> <img src="/src/views//images//view-pass.svg" onclick="showPass()"></div>
+                    </div>
+
+
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+                    <div class="form-group">
+                        <input type="submit" value="Get started" class="action">
+                    </div>
+
+                </div>
+                <% if (typeof errors !== 'undefined') { %>
+                    <div class="errorMessages">
+                        <% errors.forEach(error => { %>
+                            <%= error.message %>
+                                <% }) %>
+                    </div>
+                    <% } %>
+                        <div class="registerHref">
+                            <a> You don't have an account? </a><a href="../auth/register"> Register</a>
+                        </div>
+            </form>
+        </div>
+    </div>
+    <script src="/src/views/scripts/passwordShow.js"></script>
+</body>
+
+</html>

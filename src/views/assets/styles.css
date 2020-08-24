@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 0fr;
+    grid-gap: 1em;
+    /* grid-auto-rows: 150px; */
+    grid-auto-rows: minmax(40px, auto);
+}
+
+.included {
+    display: grid;
+    grid-template-columns: repeat(1, 0fr);
+    grid-gap: 1em;
+    grid-auto-rows: 80px;
+}
+
+.wrapper>div {
+    margin: 5%;
+    padding: 1em;
+}
+
+.form-control {
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 70%;
+    opacity: 0.5;
+    border-radius: 40px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-indent: 50px;
+}
+
+.action {
+    width: 80%;
+    height: 70%;
+    background: rgb(1, 104, 78);
+    border-radius: 40px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.logoutAction {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    position: fixed;
+    top: 5%;
+    left: 40%;
+}
+
+.background {
+    background-image: url("/src/views/images/pexels-michaela-295826.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.welcome {
+    font-family: Qwigley;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 130px;
+    line-height: 225px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.password-logo {
+    /* content: url("../images/view-pass.svg"); */
+    cursor: pointer;
+    position: relative;
+    width: 4%;
+    height: 4%;
+    left: 68%;
+    top: -48%;
+}
+
+ ::-webkit-input-placeholder {
+    /* Chrome */
+    color: rgb(73, 72, 82);
+    transition: opacity 250ms ease-in-out;
+}
+
+.registerHref {
+    color: black(241, 241, 241);
+}
+
+.errorMessages {
+    color: crimson;
+    font-size: 28px;
+    font-weight: bold;
+}
